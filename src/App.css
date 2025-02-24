@@ -1,38 +1,77 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  font-family: Arial, sans-serif;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #e2acac, #e2d6d3);
 }
 
-.App-link {
-  color: #61dafb;
+.calculator {
+  background: linear-gradient(135deg, #2c3e50, #4ca1af);
+  width: 320px;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.display {
+  background: linear-gradient(135deg, #bdf1e8, #dddad8);
+  color: rgb(24, 24, 24);
+  font-weight: lighter;
+  font-size: 2em;
+  text-align: right;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  box-shadow: inset 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+button {
+  font-size: 1.5em;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #3498db, #8e44ad);
+  border: none;
+  color: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+  background: linear-gradient(135deg, #2980b9, #6c3483);
+}
+
+button:active {
+  transform: scale(0.9);
+}
+
+button.clear {
+  background: linear-gradient(135deg, #e74c3c, #c0392b);
+}
+
+button.clear:hover {
+  background: linear-gradient(135deg, #c0392b, #a93226);
+}
+
+button.delete {
+  background: linear-gradient(135deg, #f39c12, #e67e22);
+}
+
+button.delete:hover {
+  background: linear-gradient(135deg, #e67e22, #d35400);
 }
